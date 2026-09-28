@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Malipo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Malipo</h1></div>
+        <div class="nav-user">
+            <a href="/dashboard.html" class="btn btn-secondary">← Rudi</a>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>💰 Malipo Yangu</h2>
+            <p id="studentInfo">Inapakia...</p>
+        </div>
+        <div id="loadingMessage" class="loading">Inapakia malipo...</div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+        <div id="malipoContainer" style="display:none;">
+            <div class="results-summary">
+                <div class="summary-card">
+                    <h3>Jumla ya Malipo</h3>
+                    <p id="totalMalipo">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Kiasi Kilicholipwa</h3>
+                    <p id="kiasiKilicholipwa">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Hali</h3>
+                    <p id="haliMalipo">-</p>
+                </div>
+            </div>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Risiti</th><th>Aina</th><th>Kiasi</th>
+                        <th>Tarehe</th><th>Hali</th>
+                    </tr>
+                </thead>
+                <tbody id="malipoBody"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/js/malipo.js"></script>
+</body>
+</html>

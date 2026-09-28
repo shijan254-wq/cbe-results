@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Profile</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Profile</h1></div>
+        <div class="nav-user">
+            <a href="/dashboard.html" class="btn btn-secondary">← Rudi</a>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>👤 Taarifa Zangu</h2>
+            <p>Taarifa binafsi</p>
+            <a href="/badilisha-password.html" class="btn btn-primary" style="margin-top: 16px; display: inline-block; width: auto; text-decoration: none;">🔒 Badilisha Password</a>
+        </div>
+        <div id="loadingMessage" class="loading">Inapakia...</div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+        <div id="profileContainer" style="display:none;">
+            <div class="profile-card">
+                <div class="profile-avatar">👤</div>
+                <h2 id="profileJina">-</h2>
+                <p id="profileNamba" class="profile-namba">-</p>
+            </div>
+            <div class="profile-details">
+                <div class="profile-item">
+                    <span class="profile-label">Username</span>
+                    <span class="profile-value" id="profileUsername">-</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Jinsia</span>
+                    <span class="profile-value" id="profileJinsia">-</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Course</span>
+                    <span class="profile-value" id="profileCourse">-</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Mwaka wa Kujiunga</span>
+                    <span class="profile-value" id="profileMwaka">-</span>
+                </div>
+                <div class="profile-item">
+                    <span class="profile-label">Role</span>
+                    <span class="profile-value" id="profileRole">-</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

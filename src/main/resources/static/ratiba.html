@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Ratiba</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Ratiba</h1></div>
+        <div class="nav-user">
+            <a href="/dashboard.html" class="btn btn-secondary">← Rudi</a>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>📅 Ratiba ya Masomo</h2>
+            <p>Ratiba ya wiki</p>
+        </div>
+        <div id="loadingMessage" class="loading">Inapakia...</div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+        <div id="ratibaContainer" style="display:none;">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Siku</th><th>Muda</th><th>Code</th><th>Kozi</th>
+                        <th>Darasa</th><th>Mwalimu</th>
+                    </tr>
+                </thead>
+                <tbody id="ratibaBody"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/js/ratiba.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE Results - Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>🎓 CBE</h1>
+                <p>Mfumo wa Matokeo</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Weka username" required autocomplete="username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Weka password" required autocomplete="current-password">
+                </div>
+                <div id="errorMessage" class="error-message" style="display:none;"></div>
+                <button type="submit" class="btn btn-primary" id="loginBtn">Ingia</button>
+            </form>
+            <div class="login-footer">
+                <p>Hauna account? <a href="/register.html" style="color: #667eea; text-decoration: none; font-weight: 600;">Jisajili hapa</a></p>
+                <p style="margin-top: 8px;">© 2026 Chuo cha CBE</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

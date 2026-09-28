@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Ripoti</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Ripoti</h1></div>
+        <div class="nav-user">
+            <a href="/mwalimu.html" class="btn btn-secondary">← Rudi</a>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>📊 Takwimu za Mfumo</h2>
+            <p>Muhtasari wa mfumo</p>
+        </div>
+        <div id="loadingMessage" class="loading">Inapakia...</div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+        <div id="takwimuContainer" style="display:none;">
+            <div class="results-summary">
+                <div class="summary-card">
+                    <h3>Wanafunzi</h3>
+                    <p id="jumlaWanafunzi">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Kozi</h3>
+                    <p id="jumlaKozi">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Matokeo</h3>
+                    <p id="jumlaMatokeo">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Wastani wa Alama</h3>
+                    <p id="wastaniAlama">0</p>
+                </div>
+            </div>
+            <div class="results-summary" style="margin-top: 24px;">
+                <div class="summary-card">
+                    <h3>Malipo</h3>
+                    <p id="jumlaMalipo">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Kiasi Kilicholipwa</h3>
+                    <p id="jumlaKiasi">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Waliolipa</h3>
+                    <p id="waliolipa">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Hawajalipa</h3>
+                    <p id="hawajalipa">0</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/ripoti.js"></script>
+</body>
+</html>

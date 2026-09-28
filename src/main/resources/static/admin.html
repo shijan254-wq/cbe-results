@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Admin Panel</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Admin</h1></div>
+        <div class="nav-user">
+            <span id="userName">Admin</span>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>⚙️ Admin Panel</h2>
+            <p>Usimamizi wa mfumo</p>
+        </div>
+
+        <div class="admin-tabs">
+            <button class="admin-tab active" onclick="showTab('wanafunzi')">👥 Wanafunzi</button>
+            <button class="admin-tab" onclick="showTab('kozi')">📚 Kozi</button>
+            <button class="admin-tab" onclick="showTab('matokeo')">📊 Matokeo</button>
+            <button class="admin-tab" onclick="showTab('malipo')">💰 Malipo</button>
+        </div>
+
+        <div id="wanafunziTab" class="admin-content">
+            <div class="admin-actions">
+                <button class="btn btn-primary" onclick="showForm('mwanafunzi')">➕ Ongeza Mwanafunzi</button>
+            </div>
+            <div id="mwanafunziForm" class="admin-form" style="display:none;">
+                <h3>Ongeza Mwanafunzi Mpya</h3>
+                <input type="text" id="regUsername" placeholder="Username">
+                <input type="password" id="regPassword" placeholder="Password">
+                <input type="text" id="regNamba" placeholder="Namba ya Mwanafunzi">
+                <input type="text" id="regJina" placeholder="Jina Kamili">
+                <select id="regJinsia">
+                    <option value="M">Mwanaume</option>
+                    <option value="F">Mwanamke</option>
+                </select>
+                <input type="text" id="regCourse" placeholder="Course">
+                <input type="number" id="regMwaka" placeholder="Mwaka wa Kujiunga" value="2024">
+                <div class="form-buttons">
+                    <button class="btn btn-primary" onclick="addMwanafunzi()">Hifadhi</button>
+                    <button class="btn btn-secondary" onclick="hideForm('mwanafunzi')">Ghairi</button>
+                </div>
+            </div>
+            <div id="wanafunziList" class="admin-list"></div>
+        </div>
+
+        <div id="koziTab" class="admin-content" style="display:none;">
+            <div class="admin-actions">
+                <button class="btn btn-primary" onclick="showForm('kozi')">➕ Ongeza Kozi</button>
+            </div>
+            <div id="koziForm" class="admin-form" style="display:none;">
+                <h3>Ongeza Kozi Mpya</h3>
+                <input type="text" id="koziCode" placeholder="Code (mfano: CS101)">
+                <input type="text" id="koziJina" placeholder="Jina la Kozi">
+                <input type="number" id="koziCredits" placeholder="Credits" value="3">
+                <input type="text" id="koziSemester" placeholder="Semester">
+                <div class="form-buttons">
+                    <button class="btn btn-primary" onclick="addKozi()">Hifadhi</button>
+                    <button class="btn btn-secondary" onclick="hideForm('kozi')">Ghairi</button>
+                </div>
+            </div>
+            <div id="koziList" class="admin-list"></div>
+        </div>
+
+        <div id="matokeoTab" class="admin-content" style="display:none;">
+            <div class="admin-form" style="display:block;">
+                <h3>Weka Matokeo</h3>
+                <select id="matMwanafunzi"></select>
+                <select id="matKozi"></select>
+                <input type="number" id="matAlama" placeholder="Alama">
+                <input type="text" id="matSemester" placeholder="Semester" value="Semester 1">
+                <input type="number" id="matMwaka" placeholder="Mwaka" value="2024">
+                <button class="btn btn-primary" onclick="addMatokeo()">Hifadhi Matokeo</button>
+            </div>
+        </div>
+
+        <div id="malipoTab" class="admin-content" style="display:none;">
+            <div class="admin-form" style="display:block;">
+                <h3>Weka Malipo</h3>
+                <select id="malMwanafunzi"></select>
+                <input type="number" id="malKiasi" placeholder="Kiasi" value="1500000">
+                <input type="text" id="malAina" placeholder="Aina ya Malipo" value="Ada ya Mwaka">
+                <input type="text" id="malRisiti" placeholder="Risiti">
+                <select id="malHali">
+                    <option value="IMELIPWA">Imelipwa</option>
+                    <option value="NUSU">Nusu</option>
+                    <option value="HAIJALIPWA">Haijalipwa</option>
+                </select>
+                <button class="btn btn-primary" onclick="addMalipo()">Hifadhi Malipo</button>
+            </div>
+        </div>
+    </main>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Mahudhurio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Mahudhurio</h1></div>
+        <div class="nav-user">
+            <a href="/dashboard.html" class="btn btn-secondary">← Rudi</a>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>✅ Mahudhurio Yangu</h2>
+            <p id="studentInfo">Inapakia...</p>
+        </div>
+        <div id="loadingMessage" class="loading">Inapakia...</div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+        <div id="mahudhurioContainer" style="display:none;">
+            <div class="results-summary">
+                <div class="summary-card">
+                    <h3>Jumla</h3>
+                    <p id="totalMahudhurio">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Aliyepo</h3>
+                    <p id="totalAliyepo">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Asilimia</h3>
+                    <p id="asilimia">0%</p>
+                </div>
+            </div>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Tarehe</th><th>Code</th><th>Kozi</th><th>Hali</th>
+                    </tr>
+                </thead>
+                <tbody id="mahudhurioBody"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/js/mahudhurio.js"></script>
+</body>
+</html>

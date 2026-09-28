@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Taarifa</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Taarifa</h1></div>
+        <div class="nav-user">
+            <a href="/dashboard.html" class="btn btn-secondary">← Rudi</a>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>📢 Taarifa na Matangazo</h2>
+            <p>Habari na matangazo ya chuo</p>
+        </div>
+        <div id="loadingMessage" class="loading">Inapakia...</div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+        <div id="taarifaContainer"></div>
+    </main>
+    <script src="/js/taarifa.js"></script>
+</body>
+</html>

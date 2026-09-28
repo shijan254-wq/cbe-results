@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBE - Mwalimu Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="academic-page">
+    <header class="navbar">
+        <div class="nav-brand"><h1>🎓 CBE - Mwalimu</h1></div>
+        <div class="nav-user">
+            <span id="userName">Mwalimu</span>
+            <button id="logoutBtn" class="btn btn-logout">Toka</button>
+        </div>
+    </header>
+    <main class="academic-container">
+        <div class="page-header">
+            <h2>📊 Mwalimu Dashboard</h2>
+            <p>Usimamizi wa matokeo na mahudhurio</p>
+        </div>
+
+        <div class="admin-tabs">
+            <button class="admin-tab active" onclick="showTab('matokeo')">📊 Matokeo</button>
+            <button class="admin-tab" onclick="showTab('mahudhurio')">✅ Mahudhurio</button>
+            <button class="admin-tab" onclick="showTab('wanafunzi')">👥 Wanafunzi</button>
+            <button class="admin-tab" onclick="window.location.href='/ripoti.html'">📈 Ripoti</button>
+            <button class="admin-tab" onclick="window.location.href='/statistics.html'">📊 Statistics</button>
+            <button class="admin-tab" onclick="window.location.href='/taarifa.html'">📢 Taarifa</button>
+            <button class="admin-tab" onclick="showTab('export')">📥 Export</button>
+        </div>
+
+        <div id="matokeoTab" class="admin-content">
+            <div class="admin-form" style="display:block;">
+                <h3>Weka Matokeo</h3>
+                <select id="matMwanafunzi"></select>
+                <select id="matKozi"></select>
+                <input type="number" id="matAlama" placeholder="Alama (0-100)">
+                <input type="text" id="matSemester" placeholder="Semester" value="Semester 1">
+                <input type="number" id="matMwaka" placeholder="Mwaka" value="2024">
+                <button class="btn btn-primary" onclick="addMatokeo()">Hifadhi Matokeo</button>
+            </div>
+        </div>
+
+        <div id="mahudhurioTab" class="admin-content" style="display:none;">
+            <div class="admin-form" style="display:block;">
+                <h3>Weka Mahudhurio</h3>
+                <select id="mahMwanafunzi"></select>
+                <select id="mahKozi"></select>
+                <input type="date" id="mahTarehe">
+                <select id="mahHali">
+                    <option value="ALIYEPO">Aliyepo</option>
+                    <option value="HAKUWEPO">Hakuwepo</option>
+                    <option value="ALIYECHELEWA">Aliyechelewa</option>
+                </select>
+                <button class="btn btn-primary" onclick="addMahudhurio()">Hifadhi Mahudhurio</button>
+            </div>
+        </div>
+
+        <div id="wanafunziTab" class="admin-content" style="display:none;">
+            <div class="admin-form" style="display:block;">
+                <h3>Wanafunzi Wote</h3>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tafuta kwa namba (mfano: CBE-2024-001)">
+                    <button onclick="searchStudent()" class="btn btn-primary">Tafuta</button>
+                </div>
+            </div>
+            <div id="wanafunziList" class="admin-list"></div>
+        </div>
+
+        <div id="exportTab" class="admin-content" style="display:none;">
+            <div class="admin-form" style="display:block;">
+                <h3>📥 Pakua Data (CSV)</h3>
+                <p style="margin-bottom: 16px; color: #666;">Pakua data kwa format ya CSV</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <button class="btn btn-csv" onclick="exportData('matokeo')">📊 Matokeo Yote</button>
+                    <button class="btn btn-csv" onclick="exportData('wanafunzi')">👥 Wanafunzi Wote</button>
+                    <button class="btn btn-csv" onclick="exportData('malipo')">💰 Malipo Yote</button>
+                    <button class="btn btn-csv" onclick="exportData('mahudhurio')">✅ Mahudhurio Yote</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/mwalimu.js"></script>
+    <script src="/js/download.js"></script>
+</body>
+</html>
